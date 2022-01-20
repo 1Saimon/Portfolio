@@ -1,0 +1,1 @@
+Olá, criei esse projeto para treinar HTML, CSS e JavaScript, sou um completo iniciante e estou seguindo um tutorial no Youtube para me familiarizar com as linguagens.
