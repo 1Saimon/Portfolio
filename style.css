@@ -16,8 +16,12 @@
     position: fixed;
     width: 100%;
     padding: 30px 0;
-    /* background: #f44b12; */
     font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: #f44b12;
 }
 .navbar .max-width{
     display: flex;
@@ -30,11 +34,15 @@
     color: #fff;
 }
 .navbar .logo a span{
-    color: #f44b12;  
+    color: #f44b12;
 }
 .navbar .menu li{
     list-style: none;
     display: inline-block;
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+    transition: all 0.3s ease;
 }
 .navbar .menu li a{
     color: #fff;
@@ -45,6 +53,16 @@
 }
 .navbar .menu li a:hover{
     color: #f44b12;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
 }
 /* inicio */
 
@@ -75,4 +93,94 @@
 .inicio .inicio-conteudo .texto-3 span{
     color: #f44b12;
     font-weight: 500;
+}
+.inicio .inicio-conteudo a{
+    display: inline-block;
+    background: #f44b12;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #f44b12;
+    transition: all 0.3s ease;
+}
+.inicio .inicio-conteudo a:hover{
+    color: #fff;
+    background: none;
+}
+
+/* parte responsive */
+@media (max-width: 1104px){
+    .inicio .max-width{
+        margin-left: 0px;
+    }
+}
+@media (max-width: 991px){
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px) {
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .inicio .inicio-conteudo .texto-2{
+        font-size: 70px;
+    }
+    .inicio .inicio-conteudo .texto-3{
+        font-size: 35px;
+    }
+    .inicio .inicio-conteudo a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+}
+@media (max-width: 690px){
+    .max-width{
+        padding: 0 23px;
+    }
+    .inicio .inicio-conteudo .texto-2{
+        font-size: 60px;
+    }
+    .inicio .inicio-conteudo .texto-3{
+        font-size: 32px;
+    }
+    .inicio .inicio-conteudo a{
+        font-size: 20px;
+    }
+}
+@media (max-width: 500px){
+    .inicio .inicio-conteudo .texto-2{
+        font-size: 50px;
+    }
+    .inicio .inicio-conteudo .texto-3{
+        font-size: 27px;
+    }
 }
