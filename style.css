@@ -15,6 +15,8 @@
 .navbar{
     position: fixed;
     width: 100%;
+    /* esse z-index não deixou o sobre mim ficar por cima da navbar quando desce para baixo no site */
+    z-index: 999;
     padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
@@ -110,12 +112,96 @@
     background: none;
 }
 
+/* sobre */
+
+section{
+    padding: 100px 0;
+}
+.sobre{
+    font-family: 'Poppins', sans-serif;
+}
+.sobre .titulo{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;  
+}
+.sobre .titulo:before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+.sobre .titulo:after{
+    content: "quem sou eu";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: #f44b12;
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+.sobre .sobre-conteudo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sobre .sobre-conteudo .esquerda{
+    width: 45%;
+}
+.sobre .sobre-conteudo .esquerda img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.sobre .sobre-conteudo .direita{
+    width: 55%;
+}
+.sobre .sobre-conteudo .direita .texto{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.sobre .sobre-conteudo .direita .texto span{
+    color: #f44b12;
+}
+.sobre .sobre-conteudo .direita p{
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* parte responsive */
-@media (max-width: 1104px){
+@media (max-width: 1300px){
     .inicio .max-width{
         margin-left: 0px;
     }
 }
+@media (max-width: 1104px){
+    .sobre .sobre-conteudo .esquerda img{
+        height: 400px;
+        width: 400px;
+    }
+}    
 @media (max-width: 991px){
     .max-width{
         padding: 0 50px;
@@ -160,6 +246,20 @@
     .inicio .inicio-conteudo a{
         font-size: 23px;
         padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 800px;
+    }
+    .sobre .sobre-conteudo .coluna{
+        width: 100%;
+    }
+    .sobre .sobre-conteudo .esquerda{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .sobre .sobre-conteudo .direita{
+        flex: 100%;
     }
 }
 @media (max-width: 690px){
