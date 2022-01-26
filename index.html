@@ -6,10 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+
+    <!-- seta subir -->
+
+    <div class="scrool-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+
 
     <!--barra de navegação-->
 
@@ -17,12 +25,11 @@
         <div class="max-width">
             <div class="logo"><a href="#">Port<span>fólio.</span></a></div>
             <ul class="menu">
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Habilidade</a></li>
-                <li><a href="#">Time</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#inicio" class="menu-btn">Início</a></li>
+                <li><a href="#sobre" class="menu-btn">Sobre</a></li>
+                <li><a href="#servicos" class="menu-btn">Serviços</a></li>
+                <li><a href="#hab" class="menu-btn">Habilidade</a></li>
+                <li><a href="#contato" class="menu-btn">Contato</a></li>
             </ul>
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
@@ -38,8 +45,8 @@
             <div class="inicio-conteudo">
                 <div class="texto-1">Olá, meu nome é</div>
                 <div class="texto-2">Saimon Passaura</div>
-                <div class="texto-3">e eu sou <span>Designer</span></div>
-                <a href="#">Contato</a>
+                <div class="texto-3">e eu sou <span class="typing"></span></div>
+                <a href="#contato">Contato</a>
             </div>
         </div>
     </section>
@@ -54,7 +61,7 @@
                     <img src="images/profile-1.png" alt="foto">
                 </div>
                 <div class="coluna direita">
-                    <div class="texto">Eu sou o Saimon e sou <span>Designer</span></div>
+                    <div class="texto">Eu sou o Saimon e sou <span class="typing-2"></span></div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit voluptatem, dolorum et est mollitia vero neque accusamus consequatur. Beatae, magnam odit expedita iste reiciendis molestias labore voluptas? Voluptatum, itaque veniam?</p>
                 </div>
             </div>
@@ -105,7 +112,6 @@
                 <div class="coluna esquerda">
                     <div class="texto">Minhas habilidades criativas & experiências</div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, voluptate quam ratione esse harum possimus atque perferendis eius aliquid commodi! Voluptatum sapiente eveniet nihil iusto sunt incidunt, optio repudiandae facere saepe velit consectetur. Consequuntur tempore itaque nemo error deserunt, sunt illo numquam perspiciatis illum voluptate magni reprehenderit officiis aliquam placeat optio dolores nihil voluptatem, ipsum maxime natus minus aliquid eaque.</p>
-                    <a href="#">Leia mais</a>
                 </div>
                 <div class="coluna direita">
                     <div class="barras">
@@ -142,7 +148,7 @@
     </section>
 
     <!-- contato -->
-    
+
     <section class="contato" id="contato">
         <div class="max-width">
             <h2 class="titulo">Contate-me</h2>
@@ -199,6 +205,11 @@
             </div>
         </div>
     </section>
+
+    <!-- footer -->
+    <footer>
+        <span>Criado por <a href="#">Saimon Passaura</a> | <span class="far fa-copyright"></span>2022 Todos os direitos reservados.</span>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
