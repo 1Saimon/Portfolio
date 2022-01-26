@@ -5,9 +5,6 @@
     box-sizing: border-box;
     text-decoration: none;
 }
-.sobre-conteudo{
-    flex-wrap: wrap;
-}
 .max-width{
     max-width: 1300px;
     padding: 0 80px;
@@ -115,15 +112,12 @@
     background: none;
 }
 
-/* sobre */
+/* todos que tem o estilo similar */
 
 section{
     padding: 100px 0;
 }
-.sobre{
-    font-family: 'Poppins', sans-serif;
-}
-.sobre .titulo{
+section .titulo{
     position: relative;
     text-align: center;
     font-size: 40px;
@@ -132,7 +126,7 @@ section{
     padding-bottom: 20px;
     font-family: 'Ubuntu', sans-serif;  
 }
-.sobre .titulo:before{
+section .titulo::before{
     content: "";
     position: absolute;
     bottom: 0px;
@@ -142,8 +136,7 @@ section{
     background: #111;
     transform: translateX(-50%);
 }
-.sobre .titulo:after{
-    content: "quem sou eu";
+section .titulo::after{
     position: absolute;
     bottom: -12px;
     left: 50%;
@@ -153,8 +146,20 @@ section{
     background: #fff;
     transform: translateX(-50%);
 }
-.sobre .sobre-conteudo{
+
+/* sobre */
+
+.sobre, .servicos{
+    font-family: 'Poppins', sans-serif;
+}
+.sobre .titulo::after{
+    content: "quem sou eu";
+
+}
+.sobre .sobre-conteudo,
+.servicos .servicos-conteudo{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
@@ -182,9 +187,50 @@ section{
     text-align: justify;
 }
 
+/* servicos */
 
-
-
+.servicos{
+    color: #fff;
+    background: #111;
+}
+.servicos .titulo::before{
+    background: #fff;
+}
+.servicos .titulo::after{
+    background: #111;
+    content: "o que eu faço";
+}
+.servicos .servicos-conteudo .cartao{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.servicos .servicos-conteudo .cartao:hover{
+    background: #f44b12;
+}
+.servicos .servicos-conteudo .cartao .box{
+    transition: all 0.3s ease;
+}
+.servicos .servicos-conteudo .cartao:hover .box{
+    transform: scale(1.05);
+}
+.servicos .servicos-conteudo .cartao i{
+    font-size: 50px;
+    color: #f44b12;
+}
+.servicos .servicos-conteudo .cartao:hover i{
+    color: #fff;
+    transition: color 0.3s ease;
+}
+.servicos .servicos-conteudo .cartao .texto{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
 
 
 
@@ -264,6 +310,10 @@ section{
     .sobre .sobre-conteudo .direita{
         flex: 100%;
     }
+    .servicos .servicos-conteudo .cartao{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
 }
 @media (max-width: 690px){
     .max-width{
@@ -277,6 +327,9 @@ section{
     }
     .inicio .inicio-conteudo a{
         font-size: 20px;
+    }
+    .servicos .servicos-conteudo .cartao{
+        width: 100%;
     }
 }
 @media (max-width: 500px){
